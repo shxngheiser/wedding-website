@@ -244,7 +244,7 @@ ymaps.ready(init);
 
 function init() {
     var location = [56.1469894878015,47.257469411042116];
-    var map = new ymaps.Map("map-canvas"), {
+    var map = new ymaps.Map("map-canvas", {
         zoom: 16,
         center: location,
         controls: ['routeButtonControl', 'geolocationControl']
