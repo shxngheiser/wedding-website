@@ -245,12 +245,12 @@ ymaps.ready(init);
 function init() {
     var location = [56.1469894878015,47.257469411042116];
     var map = new ymaps.Map("map-canvas", {
-        zoom: 16,
         center: location,
+        zoom: 16,
         controls: ['routeButtonControl', 'geolocationControl']
     });
 
-    marker = new ymaps.GeoObject({
+    var marker = new ymaps.GeoObject({
         geometry: {
             type: "Point",
             coordinates: location
