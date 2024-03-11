@@ -243,14 +243,14 @@ $(document).ready(function () {
 ymaps.ready(init);
 
 function init() {
-    let location = [56.1469894878015,47.257469411042116];
-    let map = new ymaps.Map("map-canvas", {
+    var location = [56.1469894878015,47.257469411042116];
+    var map = new ymaps.Map("map-canvas", {
         zoom: 16,
         center: location,
         controls: ['routeButtonControl', 'geolocationControl']
     });
 
-    let marker = new ymaps.GeoObject({
+    marker = new ymaps.GeoObject({
         geometry: {
             type: "Point",
             coordinates: location
