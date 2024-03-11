@@ -240,9 +240,9 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-ymaps.ready(initMap);
+ymaps.ready(init);
 
-function initMap() {
+function init() {
     var location = [56.1469894878015,47.257469411042116];
     var map = new ymaps.Map("map-canvas"), {
         zoom: 16,
