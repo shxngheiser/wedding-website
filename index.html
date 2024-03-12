@@ -26,17 +26,16 @@
     ymaps.ready(function() {
         map = new ymaps.Map(document.getElementById("map-canvas"), {
             center: [56.1469894878015,47.257469411042116],
-            zoom: 17,
+            zoom: 16,
             controls: ['routeButtonControl', 'geolocationControl']
         }, {
             searchControlProvider: 'yandex#search'
         });
 
-        marker = new ymaps.GeoObject({
-            geometry: {
-                type: "Point",
-                coordinates: [56.1469894878015,47.257469411042116]
-            }
+        marker = new ymaps.Placemark([56.1469894878015,47.257469411042116], {
+            iconContent: 'Вам сюда!'
+        }, {
+            preset: "islands#redStretchyIcon"
         });
 
         map.geoObjects.add(marker);
