@@ -240,7 +240,7 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-ymaps.ready(init);
+/*ymaps.ready(init);
 
 function init() {
     var location = [56.1469894878015,47.257469411042116];
@@ -258,7 +258,7 @@ function init() {
     });
 
     map.geoObjects.add(marker);
-}
+}*/
 
 /*function initBBSRMap() {
     var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};

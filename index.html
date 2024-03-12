@@ -486,8 +486,27 @@
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
 <script async defer
-        src="https://api-maps.yandex.ru/2.1/?apikey=be1db52d-f6b8-4d33-b2a5-c65170f8242d&lang=ru_RU&callback=init"></script>
+        src="https://api-maps.yandex.ru/2.1/?apikey=be1db52d-f6b8-4d33-b2a5-c65170f8242d&lang=ru_RU"></script>
 <script type="text/javascript">
+    var map;
+    ymaps.ready(function() {
+        var location = [56.1469894878015,47.257469411042116];
+        map = new ymaps.Map("map-canvas", {
+            center: location,
+            zoom: 16,
+            controls: ['routeButtonControl', 'geolocationControl']
+        });
+
+        var marker = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: location
+            }
+        });
+
+        map.geoObjects.add(marker);
+    });
+</script>
 <!-- Google Analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {
