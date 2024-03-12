@@ -21,8 +21,10 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=be1db52d-f6b8-4d33-b2a5-c65170f8242d&lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
     var map;
+    var marker;
+
     ymaps.ready(function() {
-        map = new ymaps.Map(document.getElementById("map-canvas")), {
+        map = new ymaps.Map(document.getElementById("map-canvas"), {
             center: [56.1469894878015,47.257469411042116],
             zoom: 16,
             controls: ['routeButtonControl', 'geolocationControl']
@@ -30,7 +32,7 @@
             searchControlProvider: 'yandex#search'
         });
 
-        var marker = new ymaps.GeoObject({
+        marker = new ymaps.GeoObject({
             geometry: {
                 type: "Point",
                 coordinates: [56.1469894878015,47.257469411042116]
@@ -38,6 +40,7 @@
         });
 
         map.geoObjects.add(marker);
+        )
     });
     </script>
 
