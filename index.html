@@ -32,6 +32,8 @@
             searchControlProvider: 'yandex#search'
         });
 
+        map.behaviors.disable('scrollZoom');
+
         marker = new ymaps.Placemark([56.1469894878015,47.257469411042116], {
             iconContent: 'Вам сюда!'
         }, {
