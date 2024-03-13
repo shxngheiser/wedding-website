@@ -219,7 +219,7 @@ $(document).ready(function () {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Извините</strong>, но введенный Вами ключ-код не правильный.'));
         } else {
             //$.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
-            $.post('https://script.google.com/macros/s/AKfycbx4esRgof7dinKSDaY95U6To_PDQbmDsHCtDUER17qI5Z_Et8erAc2iUIW_K8xzpa9wHw/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbyDCZOFesuxRez23TFtG8aeInoTNnKoJoiFSbWxVaKxPZs6GxsVazKnpCR6SYwXUtekmA/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
