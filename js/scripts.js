@@ -212,13 +212,14 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Секунду</strong>, мы сохраняем Ваши данные.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
+        if (MD5($('#invite_code').val()) !== 'e92fbd21a75239a4194986de4d04d5b4'
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Извините</strong>, но введенный Вами ключ-код не правильный.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
+            //$.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbwLmv-eYMOKBW7k_g7PaORTKrCYtECanT6vpMpq_cSxn2bVVTQgj1vFfXCh5OWbYpMtBQ/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -230,7 +231,7 @@ $(document).ready(function () {
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Извините!</strong> Похоже, какие-то неполадки с сервером. '));
                 });
         }
     });
